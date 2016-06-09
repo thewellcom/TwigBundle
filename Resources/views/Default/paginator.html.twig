@@ -1,0 +1,21 @@
+<ul class="text-center pagination">
+    {% if prevNb %}
+        <li><a href="{{ path(pathName, query|merge({ (cursorName): prevNb })) }}"><i class="fa fa-angle-left"></i></a></li>
+    {% endif %}
+
+    {% if totalItem > nbPerPage or totalItem == nbPerPage%}
+        {% set nbPage = (totalItem / 10)|round %}
+    {% else %}
+        {% set nbPage = 1 %}
+    {% endif %}
+
+    {% if nbPage %}
+        {% for i in 1..nbPage %}
+            <li><a {% if i == currentPageNb %}class="current"{% endif %} href="{{ path(pathName, query|merge({ (cursorName): i })) }}">{{ i }}</a></li>
+        {% endfor %}
+    {% endif %}
+
+    {% if nextNb %}
+        <li><a href="{{ path(pathName, query|merge({ (cursorName): nextNb })) }}"><i class="fa fa-angle-right"></i></a></li>
+    {% endif %}
+</ul>
