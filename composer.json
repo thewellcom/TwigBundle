@@ -1,0 +1,17 @@
+{
+    "name": "thewellcom/twig-bundle",
+    "license": "MIT",
+    "type": "symfony-bundle",
+    "description": "Add filters and functions into your symfony project with this bundle",
+    "keywords": ["symfony2", "symfony3", "twig"],
+    "homepage": "https://github.com/twcsamar/TwigBundle",
+    "authors": [
+        {
+            "name": "Stephen Samar",
+            "homepage": "http://www.thewellcom.fr"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "TheWellCom\\TwigBundle\\": "" }
+    }
+}
